@@ -173,12 +173,17 @@
 
         <h3>Information Automatically Collected</h3>
         <ul>
-            <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers</li>
-            <li><strong>Usage Data:</strong> How you interact with the app, features you use, time spent</li>
-            <li><strong>Location Data:</strong> Approximate location (only if you grant permission) to show relevant hotels</li>
+            <li><strong>Device Information:</strong> Device type, operating system (e.g. iOS, Android)</li>
+            <li><strong>Usage Data:</strong> How you interact with the app, features you use, time spent (consent-gated when used for analytics)</li>
+            <li><strong>Location Data:</strong> We may request location permission to show your position on the map. We do <strong>not</strong> use precise location (GPS) for analytics. When you enable "Improve recommendations", we use approximate country from your device locale only.</li>
             <li><strong>Session Data:</strong> Anonymous session IDs to understand app usage patterns (consent-gated)</li>
-            <li><strong>Anonymous ID:</strong> Device-specific anonymous identifier (no personal info, consent-gated)</li>
+            <li><strong>Anonymous ID:</strong> Device-specific anonymous identifier when analytics is enabled (no personal info, consent-gated)</li>
+            <li><strong>Crash / Error Reports (Diagnostics):</strong> If the app encounters an error, we may send a one-time report (error message, stack trace, timestamp) to our servers for logging. This data is <strong>not</strong> stored in a user database and is <strong>not</strong> linked to your identity, email, or account.</li>
+            <li><strong>IP Address:</strong> Our servers may receive your IP address for security, rate limiting, and audit purposes (e.g. when you request account deletion). We do not use IP for profiling or advertising.</li>
         </ul>
+
+        <h3>Analytics (First-Party Only)</h3>
+        <p>We do <strong>not</strong> use Firebase, Amplitude, PostHog, Mixpanel, or any third-party analytics SDK. We use our own first-party analytics, which is <strong>optional</strong> and only active when you enable "Improve recommendations" in Privacy &amp; Data. When enabled, we collect events such as session start/end, card views, swipe decisions, and time spent — to improve recommendations. This data is linked to your account when you are logged in and is stored in our EU-based database (Supabase).</p>
 
         <h2>2. Photo Sources & Third-Party Services</h2>
 
@@ -200,9 +205,12 @@
 
         <h3>Other Third-Party Services</h3>
         <ul>
-            <li><strong>Supabase:</strong> Secure database and authentication (EU servers)</li>
+            <li><strong>Supabase:</strong> Secure database and authentication (EU region). They process data on our behalf (processor).</li>
             <li><strong>Google Maps:</strong> Hotel location display and mapping</li>
+            <li><strong>API Hosting:</strong> Our app backend is hosted by a US-based provider (e.g. Railway). Requests (including optional analytics and one-time crash reports) pass through their infrastructure; logs may be processed in the United States. No user database is hosted there — only our API and logs.</li>
         </ul>
+
+        <p><strong>We do not sell your personal information.</strong> We do not use advertising identifiers (e.g. IDFA) or track you across other companies' apps. No App Tracking Transparency (ATT) prompt is used for advertising.</p>
 
         <h2>3. How We Use Your Information</h2>
 
@@ -300,7 +308,7 @@
 
         <h2>8. International Data Transfers</h2>
 
-        <p>Glintz is operated from the United States. Your data may be transferred to and processed in the U.S. and other countries where our service providers operate.</p>
+        <p>Glintz is operated from the United States. Your data may be transferred to and processed in the U.S. and other countries where our service providers operate. For example, our API and its logs (including one-time crash reports and security/audit logs) are hosted in the United States; our main database and analytics storage use EU-based infrastructure (Supabase) where applicable.</p>
 
         <h3>For EU/EEA Users (GDPR Compliance)</h3>
         <ul>
@@ -344,9 +352,11 @@
             <p><strong>Response Time:</strong> We typically respond within 48 hours</p>
         </div>
 
-        <h2>13. Third-Party Links</h2>
+        <h2>13. Third-Party Links, Booking &amp; Monetisation</h2>
 
-        <p>Glintz may contain links to external websites (like hotel booking sites and Google Maps). We are not responsible for the privacy practices of these external sites. Please review their privacy policies before providing any information.</p>
+        <p>Glintz may contain links to external websites (e.g. hotel booking sites and Google Maps). When you tap a booking or partner link, you <strong>leave the app</strong> and open the site in your device's browser (e.g. Safari). We do not use an in-app browser for booking. We are not responsible for the privacy or payment practices of these external sites.</p>
+        <p><strong>We do not process payments</strong> inside the app. Any booking or purchase happens entirely on the external site. We may use affiliate links (e.g. to booking platforms); if you make a booking after following a link, we may receive a commission. This does not change the price you pay.</p>
+        <p>Please review the privacy policies of any external site before providing information.</p>
 
         <h2>14. Data Protection by Design</h2>
 
@@ -363,14 +373,17 @@
 
         <p>For transparency, here's what we <strong>don't</strong> collect:</p>
         <ul class="no-collect">
-            <li>Precise location (GPS coordinates)</li>
-            <li>Date of birth (only age bracket)</li>
-            <li>Financial information (no in-app purchases yet)</li>
+            <li>Precise location for analytics (we only use approximate country from device locale when you opt in)</li>
+            <li>Advertising identifier (IDFA or similar) — we do not track you for ads</li>
+            <li>Device ID or fingerprint for tracking</li>
+            <li>Date of birth (only optional age bracket)</li>
+            <li>Financial information (no in-app purchases)</li>
             <li>Health data</li>
             <li>Contacts</li>
             <li>Browsing history outside of Glintz</li>
             <li>Government IDs</li>
             <li>Biometric data</li>
+            <li>Purchase or search history</li>
         </ul>
 
         <div class="footer">
