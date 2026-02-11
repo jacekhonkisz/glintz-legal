@@ -177,9 +177,9 @@
             <li><strong>Usage Data:</strong> How you interact with the app, features you use, time spent (consent-gated when used for analytics)</li>
             <li><strong>Location Data:</strong> We may request location permission to show your position on the map. We do <strong>not</strong> use precise location (GPS) for analytics. When you enable "Improve recommendations", we use approximate country from your device locale only.</li>
             <li><strong>Session Data:</strong> Anonymous session IDs to understand app usage patterns (consent-gated)</li>
-            <li><strong>Anonymous ID:</strong> Device-specific anonymous identifier when analytics is enabled (no personal info, consent-gated)</li>
-            <li><strong>Crash / Error Reports (Diagnostics):</strong> If the app encounters an error, we may send a one-time report (error message, stack trace, timestamp) to our servers for logging. This data is <strong>not</strong> stored in a user database and is <strong>not</strong> linked to your identity, email, or account.</li>
-            <li><strong>IP Address:</strong> Our servers may receive your IP address for security, rate limiting, and audit purposes (e.g. when you request account deletion). We do not use IP for profiling or advertising.</li>
+            <li><strong>Anonymous ID:</strong> When analytics is enabled, we use a randomly generated analytics identifier. This identifier is not based on device fingerprinting and is resettable upon account deletion.</li>
+            <li><strong>Crash / Error Reports (Diagnostics):</strong> If the app encounters an error, we may send a one-time report (error message, stack trace, timestamp) to our servers for logging. This data is <strong>not</strong> stored in a user database and is <strong>not</strong> linked to your identity, email, or account. Crash reports do not contain personal content, hotel interaction history, or full account data.</li>
+            <li><strong>IP Address:</strong> Our servers may receive your IP address for security, rate limiting, and audit purposes (e.g. when you request account deletion). IP addresses are not stored in user profiles and are not used for behavioral profiling, advertising, or cross-app tracking.</li>
         </ul>
 
         <h3>Analytics (First-Party Only)</h3>
@@ -194,7 +194,7 @@
             <p><strong>Important:</strong> Photos displayed in Glintz are the property of Google and their contributors. When you view a hotel, you can tap "View on Google Maps" to see the official Google Maps listing with full photo credits and attribution.</p>
         </div>
 
-        <p><strong>Google's Terms of Service:</strong> By using Glintz, you also agree to Google's terms for the Places API. Learn more at: <a href="https://policies.google.com/terms" target="_blank" rel="noopener">https://policies.google.com/terms</a></p>
+        <p>Certain content (such as hotel photos and map data) is provided by third-party services and is subject to their respective terms and policies. For Google's terms, see <a href="https://policies.google.com/terms" target="_blank" rel="noopener">https://policies.google.com/terms</a>.</p>
 
         <h3>Mapbox</h3>
         <p>Hotel map displays use <strong>Mapbox</strong> for beautiful, interactive maps.</p>
@@ -228,11 +228,22 @@
 
         <p>We <strong>do not sell</strong> your personal information. We only share data in these limited cases:</p>
 
+        <p><strong>We do not provide hotels or partners with access to individual user accounts, personal identifiers, or user-level interaction data.</strong></p>
+
         <h3>Service Providers</h3>
         <ul>
             <li><strong>Supabase:</strong> Database hosting and authentication</li>
             <li><strong>Google:</strong> Maps and photos (subject to Google's privacy policy)</li>
             <li><strong>Mapbox:</strong> Map rendering (telemetry disabled)</li>
+        </ul>
+
+        <h3>Aggregated and Anonymized Insights</h3>
+        <p>We may use aggregated and anonymized statistics (such as overall engagement trends, popular hotel categories, or general usage patterns) to improve the platform or provide high-level performance insights to hotel partners. These statistics:</p>
+        <ul>
+            <li>Do not include personal identifiers</li>
+            <li>Do not include email addresses or account IDs</li>
+            <li>Cannot be used to identify individual users</li>
+            <li>Are not shared at a user-level granularity</li>
         </ul>
 
         <h3>Legal Requirements</h3>
@@ -245,7 +256,7 @@
 
         <ul>
             <li><strong>Account Data:</strong> Kept while your account is active</li>
-            <li><strong>After Deletion:</strong> We delete your data within 30 days of account deletion</li>
+            <li><strong>After Deletion:</strong> Upon account deletion, personal data associated with the account is permanently removed within 30 days, except where limited retention is required for legal or security purposes.</li>
             <li><strong>Legal Requirements:</strong> Some data may be retained longer if required by law</li>
         </ul>
 
@@ -308,7 +319,7 @@
 
         <h2>8. International Data Transfers</h2>
 
-        <p>Glintz is operated from the United States. Your data may be transferred to and processed in the U.S. and other countries where our service providers operate. For example, our API and its logs (including one-time crash reports and security/audit logs) are hosted in the United States; our main database and analytics storage use EU-based infrastructure (Supabase) where applicable.</p>
+        <p>Glintz operates globally. Our infrastructure includes EU-based database services (Supabase EU region) and US-based API hosting providers (e.g. Railway). Your data may be transferred to and processed in the U.S. and other countries where our service providers operate. Our main database and analytics storage use EU-based infrastructure (Supabase); our API and its logs (including one-time crash reports and security/audit logs) are hosted in the United States.</p>
 
         <h3>For EU/EEA Users (GDPR Compliance)</h3>
         <ul>
