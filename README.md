@@ -12,9 +12,9 @@ Glintz is a luxury hotel discovery app available on iOS.
 
 ## Contact
 
-For privacy-related inquiries: privacy@glintz.travel
+For privacy-related inquiries: contact@glintz.co
 
 ## Last Updated
 
-October 10, 2025
+February 11, 2026
 

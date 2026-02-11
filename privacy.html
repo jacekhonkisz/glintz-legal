@@ -74,6 +74,14 @@
             font-weight: 600;
         }
 
+        h4 {
+            font-size: 16px;
+            color: #444;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
         p {
             margin-bottom: 15px;
             color: #444;
@@ -115,6 +123,15 @@
             font-size: 14px;
         }
 
+        .no-collect {
+            list-style: none;
+            margin-left: 0;
+        }
+        .no-collect li:before {
+            content: "✗ ";
+            color: #c00;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 25px;
@@ -137,7 +154,7 @@
         </div>
 
         <h1>Privacy Policy</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> October 10, 2025</p>
+        <p class="last-updated"><strong>Last Updated:</strong> February 11, 2026</p>
 
         <div class="highlight">
             <p><strong>Summary:</strong> Glintz helps you discover luxury hotels through a beautiful swipe interface. We care about your privacy and only collect what's necessary to provide you with a great experience.</p>
@@ -150,6 +167,8 @@
             <li><strong>Email Address:</strong> Used for account creation and authentication</li>
             <li><strong>Hotel Preferences:</strong> Hotels you like, super-like, or save</li>
             <li><strong>Interactions:</strong> Your swipes, views, and hotel browsing behavior</li>
+            <li><strong>Age Range:</strong> Optional age bracket (18-24, 25-34, 35-44, 45+) for analytics — we don't collect your exact date of birth</li>
+            <li><strong>Country:</strong> Approximate country from device locale (not precise location)</li>
         </ul>
 
         <h3>Information Automatically Collected</h3>
@@ -157,6 +176,8 @@
             <li><strong>Device Information:</strong> Device type, operating system, unique device identifiers</li>
             <li><strong>Usage Data:</strong> How you interact with the app, features you use, time spent</li>
             <li><strong>Location Data:</strong> Approximate location (only if you grant permission) to show relevant hotels</li>
+            <li><strong>Session Data:</strong> Anonymous session IDs to understand app usage patterns (consent-gated)</li>
+            <li><strong>Anonymous ID:</strong> Device-specific anonymous identifier (no personal info, consent-gated)</li>
         </ul>
 
         <h2>2. Photo Sources & Third-Party Services</h2>
@@ -168,7 +189,14 @@
             <p><strong>Important:</strong> Photos displayed in Glintz are the property of Google and their contributors. When you view a hotel, you can tap "View on Google Maps" to see the official Google Maps listing with full photo credits and attribution.</p>
         </div>
 
-        <p><strong>Google's Terms of Service:</strong> By using Glintz, you also agree to Google's terms for the Places API. Learn more at: <a href="https://policies.google.com/terms" target="_blank">https://policies.google.com/terms</a></p>
+        <p><strong>Google's Terms of Service:</strong> By using Glintz, you also agree to Google's terms for the Places API. Learn more at: <a href="https://policies.google.com/terms" target="_blank" rel="noopener">https://policies.google.com/terms</a></p>
+
+        <h3>Mapbox</h3>
+        <p>Hotel map displays use <strong>Mapbox</strong> for beautiful, interactive maps.</p>
+        <div class="highlight">
+            <p><strong>Important:</strong> Glintz disables Mapbox telemetry for enhanced privacy. No location tracking or analytics data is sent to Mapbox beyond what's necessary to render maps.</p>
+        </div>
+        <p><strong>Mapbox's Privacy Policy:</strong> <a href="https://www.mapbox.com/legal/privacy" target="_blank" rel="noopener">https://www.mapbox.com/legal/privacy</a></p>
 
         <h3>Other Third-Party Services</h3>
         <ul>
@@ -181,9 +209,9 @@
         <p>We use your information to:</p>
         <ul>
             <li><strong>Provide the Service:</strong> Show you hotels, save your preferences, remember your likes</li>
-            <li><strong>Personalization:</strong> Recommend hotels based on your preferences and behavior</li>
+            <li><strong>Personalization:</strong> Recommend hotels based on your preferences, country, age range, and browsing behavior (if analytics consent is enabled)</li>
             <li><strong>Authentication:</strong> Verify your identity and secure your account</li>
-            <li><strong>Communication:</strong> Send you important updates about the service (no marketing)</li>
+            <li><strong>Communication:</strong> Send you important updates about the service (no marketing without consent)</li>
             <li><strong>Improve the App:</strong> Analyze usage to make Glintz better</li>
             <li><strong>Safety & Security:</strong> Protect against fraud, abuse, and security issues</li>
         </ul>
@@ -196,6 +224,7 @@
         <ul>
             <li><strong>Supabase:</strong> Database hosting and authentication</li>
             <li><strong>Google:</strong> Maps and photos (subject to Google's privacy policy)</li>
+            <li><strong>Mapbox:</strong> Map rendering (telemetry disabled)</li>
         </ul>
 
         <h3>Legal Requirements</h3>
@@ -214,11 +243,40 @@
 
         <h2>6. Your Rights & Choices</h2>
 
-        <h3>Access & Control</h3>
+        <h3>Consent Categories in Glintz</h3>
+        <p>When you first use Glintz, you choose your privacy preferences:</p>
+
+        <h4>1. Core Functionality (Always On)</h4>
+        <ul>
+            <li>Required for the app to work</li>
+            <li>Saves your hotel preferences (likes, saves, superlikes)</li>
+            <li>Shows your personalized discovery feed</li>
+            <li>Remembers your interactions</li>
+            <li>No opt-out available (essential for service)</li>
+        </ul>
+
+        <h4>2. Improve Recommendations (Optional)</h4>
+        <ul>
+            <li>Analytics to personalize hotel suggestions</li>
+            <li>Requires: country, age range</li>
+            <li>Tracks: browsing patterns, card views, session duration, preferences</li>
+            <li>Can be disabled anytime in Profile → Privacy &amp; Data</li>
+        </ul>
+
+        <h4>3. Marketing Communications (Optional)</h4>
+        <ul>
+            <li>Updates about new features and partnerships</li>
+            <li>Can be disabled anytime</li>
+            <li>Currently not active</li>
+        </ul>
+
+        <p><strong>You can review and change these settings anytime in your profile.</strong></p>
+
+        <h3>Access &amp; Control</h3>
         <ul>
             <li><strong>View Your Data:</strong> See all data we have about you</li>
             <li><strong>Update Information:</strong> Correct or update your information</li>
-            <li><strong>Delete Account:</strong> Request full account deletion</li>
+            <li><strong>Delete Account:</strong> Request full account deletion (Profile → Delete My Account)</li>
             <li><strong>Export Data:</strong> Download your data in portable format</li>
         </ul>
 
@@ -227,6 +285,7 @@
             <li><strong>Location:</strong> Control location access in device settings</li>
             <li><strong>Email:</strong> Opt-out of non-essential emails</li>
             <li><strong>Preferences:</strong> Clear your saved hotels and preferences anytime</li>
+            <li><strong>Analytics:</strong> Disable analytics in Privacy &amp; Data settings</li>
         </ul>
 
         <h2>7. Security</h2>
@@ -234,7 +293,7 @@
         <p>We take security seriously and implement:</p>
         <ul>
             <li><strong>Encryption:</strong> All data is encrypted in transit (HTTPS) and at rest</li>
-            <li><strong>Secure Authentication:</strong> Passwordless OTP login for enhanced security</li>
+            <li><strong>Secure Authentication:</strong> Passwordless magic link login for enhanced security</li>
             <li><strong>Access Controls:</strong> Limited employee access to personal data</li>
             <li><strong>Regular Audits:</strong> Security reviews and updates</li>
         </ul>
@@ -280,8 +339,8 @@
         <p>Questions about this Privacy Policy or your data?</p>
 
         <div class="highlight">
-            <p><strong>Email:</strong> <a href="mailto:privacy@glintz.travel">privacy@glintz.travel</a></p>
-            <p><strong>Data Protection Officer:</strong> <a href="mailto:dpo@glintz.travel">dpo@glintz.travel</a></p>
+            <p><strong>Email:</strong> <a href="mailto:contact@glintz.co">contact@glintz.co</a></p>
+            <p><strong>Website:</strong> <a href="https://glintz.co" target="_blank" rel="noopener">https://glintz.co</a></p>
             <p><strong>Response Time:</strong> We typically respond within 48 hours</p>
         </div>
 
@@ -297,12 +356,27 @@
             <li><strong>Purpose Limitation:</strong> Data is only used for stated purposes</li>
             <li><strong>Storage Limitation:</strong> Data is not kept longer than necessary</li>
             <li><strong>User Control:</strong> You control your data and preferences</li>
+            <li><strong>Consent-First:</strong> Analytics and marketing require your explicit consent</li>
+        </ul>
+
+        <h2>15. Data We Do NOT Collect</h2>
+
+        <p>For transparency, here's what we <strong>don't</strong> collect:</p>
+        <ul class="no-collect">
+            <li>Precise location (GPS coordinates)</li>
+            <li>Date of birth (only age bracket)</li>
+            <li>Financial information (no in-app purchases yet)</li>
+            <li>Health data</li>
+            <li>Contacts</li>
+            <li>Browsing history outside of Glintz</li>
+            <li>Government IDs</li>
+            <li>Biometric data</li>
         </ul>
 
         <div class="footer">
-            <p><strong>© 2025 Glintz. All rights reserved.</strong></p>
+            <p><strong>© 2026 Glintz. All rights reserved.</strong></p>
             <p>This privacy policy is designed to comply with GDPR, CCPA, and other privacy regulations.</p>
-            <p><a href="https://jacekhonkisz.github.io/glintz-legal/terms.html">Terms of Service</a></p>
+            <p><a href="terms.html">Terms of Service</a></p>
         </div>
     </div>
 </body>
